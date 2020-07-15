@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Home } from "./views/Home";
+import { Admin } from "./views/Admin";
 import injectContext from "./store/Context";
 
 //create your first component
@@ -15,6 +16,7 @@ export const Layout = () => {
 			<BrowserRouter>
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route exact path="/Admin" component={Admin} />
 					<Route render={() => <h1>Not found!</h1>} />
 				</Switch>
 			</BrowserRouter>

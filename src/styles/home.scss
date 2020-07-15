@@ -1,0 +1,60 @@
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+}
+
+:-ms-input-placeholder {  
+    text-align: center; 
+}
+
+.container-general{
+    display: flex;
+    height: 100%;
+
+    .container-logo{
+        margin: auto;
+        border: 1px solid #0E0A56;
+        padding: 20px;
+        border-radius: 50px;
+
+        .logo{
+            height: 70px;
+        }
+        .login{
+            margin: 15px 0;
+
+            .input-style{
+                border-radius: 15px;
+                font-size: 20px;
+            }
+        }
+        .login-button{
+            display: flex;
+            justify-content: center;
+
+            .button-style{
+                background-color: #0E0A56;
+                border-color: #0E0A56;
+                box-shadow: none;
+                font-size: 20px;
+            }
+            .button-style:hover{
+                background-color: #0a0836;
+                border-color: #0a0836;
+                box-shadow: 10px 18px #F7020F;
+            }
+            .button-style:active{
+                background-color: #0a0836;
+                border-color: #0a0836;
+                box-shadow: 10px 18px #F7020F;
+            }
+        }
+    }
+}
