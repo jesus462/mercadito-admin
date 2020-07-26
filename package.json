@@ -73,6 +73,7 @@
 		"bootstrap": "^4.4.1",
 		"cloudinary-react": "^1.6.1",
 		"convert-excel-to-json": "^1.7.0",
+		"firebase": "^7.17.0",
 		"jquery": "^3.5.0",
 		"office-ui-fabric-react": "^7.122.0",
 		"popper.js": "^1.16.1",

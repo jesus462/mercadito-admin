@@ -1,0 +1,38 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.container-adding-item{
+    width: 60%;
+    height: 20%;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+
+    .title{
+        text-align: center;
+    }
+    .input-style{
+        font-size: 15px;
+    }
+    .container-button{
+        margin-top: 3px;
+        display: flex;
+        justify-content: center;
+
+        .button{
+            padding: 0 6px;
+            width: 91px;
+        }
+    }
+}

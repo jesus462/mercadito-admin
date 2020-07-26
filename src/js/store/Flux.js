@@ -1,34 +1,18 @@
-const getState = ({ getStore, getActions, setStore }) => {
-	const APIurl = "https://3000-b0d370a1-2329-43ed-96dc-d2066a5cc2a7.ws-us02.gitpod.io/items";
+import firebase from "../utils/firebase";
 
+const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			cloudinary: { userName: "dqjibjhkx" },
-			data: []
+			items: []
 		},
 		actions: {
-			fetchCreateClient: async item => {
-				let actions = getActions();
-				let itemWasCreated = false;
-
-				try {
-					let response = await fetch(APIurl, {
-						method: "POST",
-						headers: {
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify(item)
-					});
-
-					if (response.ok) {
-						await actions.fetchUserClients();
-						itemWasCreated = true;
-					}
-				} catch (error) {
-					console.log(error);
-				}
-
-				return itemWasCreated;
+			fetchItems: async () => {
+				const db = firebase.firestore();
+				let data = await db.collection("items").get();
+				setStore({
+					items: data.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+				});
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

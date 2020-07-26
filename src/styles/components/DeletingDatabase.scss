@@ -1,0 +1,24 @@
+.container-deleting{
+    width: 60%;
+    height: 10%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+
+    .title{
+        text-align: center;
+    }
+    .container-button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        .button{
+            padding: 0 6px;
+            width: 91px;
+        }
+    }
+}
