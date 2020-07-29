@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect, useContext } from "react";
 import { Context } from "../store/Context";
-import { Button, InputGroup, FormControl, Table } from "react-bootstrap";
+import { Button, InputGroup, FormControl } from "react-bootstrap";
 
 import firebase from "../utils/firebase";
 

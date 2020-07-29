@@ -3,7 +3,7 @@ import { Context } from "../store/Context";
 import XLSX from "xlsx";
 import { MakeCols } from "../utils/makeColumns";
 import { SheetJSFT } from "../utils/filesTypes";
-import { Button, InputGroup, FormControl } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import firebase from "../utils/firebase";
 

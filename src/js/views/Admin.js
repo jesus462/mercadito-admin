@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect, useContext } from "react";
 import { Context } from "../store/Context";
 
 import { ExcelReader } from "../components/ExcelReader";
-import { FirestoreCRUD } from "../components/FirestoreCRUD";
+import { FirestoreTable } from "../components/FirestoreTable";
 import { AddingItem } from "../components/AddingItem";
 
 import "../../styles/Admin.scss";
@@ -14,7 +14,7 @@ export const Admin = () => {
 			<DeletingDatabase />
 			<ExcelReader />
 			<AddingItem />
-			<FirestoreCRUD />
+			<FirestoreTable />
 		</div>
 	);
 };

@@ -9,11 +9,12 @@ import "../../styles/components/DeletingDatabase.scss";
 export const DeletingDatabase = () => {
 	const { store, actions } = useContext(Context);
 
-	const onDeleteAll = () => {
+	const onDeleteAll = async () => {
 		const db = firebase.firestore();
 
 		for (let i = 0; i < store.items.length; i++) {
-			db.collection("items")
+			await db
+				.collection("items")
 				.doc(store.items[i].id)
 				.delete();
 		}
