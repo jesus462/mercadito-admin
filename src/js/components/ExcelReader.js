@@ -76,6 +76,7 @@ export const ExcelReader = () => {
 			for (let i = 0; i < state.data.length; i++) {
 				db.collection("items").add(state.data[i]);
 			}
+			actions.setLoadingItems(store.loadingItems);
 			alert("cargado");
 			setState({ loaded: false, process: false });
 			actions.fetchItems();

@@ -1,16 +1,18 @@
 import firebase from "firebase";
+import "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyCuFWyKdrC2ayGlm6S5gb-4yfjfigHYW_0",
-	authDomain: "mercadito-admin.firebaseapp.com",
-	databaseURL: "https://mercadito-admin.firebaseio.com",
-	projectId: "mercadito-admin",
-	storageBucket: "mercadito-admin.appspot.com",
-	messagingSenderId: "527114009156",
-	appId: "1:527114009156:web:3cecbee4a3486627cd9a11",
-	measurementId: "G-XW043DJ8K6"
+	apiKey: "AIzaSyDzBuWzJxCOkXKTqcnDzzwdVoSE4xFDQEk",
+	authDomain: "mercadito-web.firebaseapp.com",
+	databaseURL: "https://mercadito-web.firebaseio.com",
+	projectId: "mercadito-web",
+	storageBucket: "mercadito-web.appspot.com",
+	messagingSenderId: "270843247766",
+	appId: "1:270843247766:web:912fd5990e9f0ac9bcd6b7",
+	measurementId: "G-8L0SNEXHPP"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 

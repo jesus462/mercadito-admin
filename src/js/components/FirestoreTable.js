@@ -22,9 +22,21 @@ export const FirestoreTable = () => {
 						</tr>
 					</thead>
 					<tbody>
-						{store.items.map(item => {
-							return <EditableItems key={item.id} item={item} />;
-						})}
+						{store.loadingItems ? (
+							<tr>
+								<td colSpan="4" className="loading">
+									loading...
+								</td>
+							</tr>
+						) : store.items.length > 0 ? (
+							store.items.map(item => {
+								return <EditableItems key={item.id} item={item} />;
+							})
+						) : (
+							<tr>
+								<td colSpan="4">No hay items cargados.</td>
+							</tr>
+						)}
 					</tbody>
 				</Table>
 			</div>

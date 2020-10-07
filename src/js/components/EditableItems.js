@@ -13,10 +13,10 @@ export const EditableItems = ({ item }) => {
 	const [edit, setEdit] = useState(false);
 
 	const [editItem, setEditItem] = useState({
-		code: item.code,
-		name: item.name,
-		price: item.price,
-		type: item.type
+		COD: item.COD,
+		DESCRIPCION: item.DESCRIPCION,
+		PVP: item.PVP,
+		CATEGORIA: item.CATEGORIA
 	});
 
 	const db = firebase.firestore();
@@ -52,12 +52,12 @@ export const EditableItems = ({ item }) => {
 						placeholder="Código"
 						aria-describedby="basic-addon1"
 						type="number"
-						name="code"
-						value={editItem.code}
+						name="COD"
+						value={editItem.COD}
 					/>
 				</td>
 			) : (
-				<td className="table-cell">{item.code}</td>
+				<td className="table-cell">{item.COD}</td>
 			)}
 			{edit ? (
 				<td className="table-cell">
@@ -67,12 +67,12 @@ export const EditableItems = ({ item }) => {
 						placeholder="Descripción"
 						aria-describedby="basic-addon1"
 						type="text"
-						name="name"
-						value={editItem.name}
+						name="DESCRIPCION"
+						value={editItem.DESCRIPCION}
 					/>
 				</td>
 			) : (
-				<td className="table-cell">{item.name.toLowerCase()}</td>
+				<td className="table-cell">{item.DESCRIPCION /*.toLowerCase()*/}</td>
 			)}
 			{edit ? (
 				<td className="table-cell">
@@ -82,12 +82,12 @@ export const EditableItems = ({ item }) => {
 						placeholder="Precio"
 						aria-describedby="basic-addon1"
 						type="number"
-						name="price"
-						value={editItem.price}
+						name="PVP"
+						value={editItem.PVP}
 					/>
 				</td>
 			) : (
-				<td className="table-cell">${item.price}</td>
+				<td className="table-cell">${item.PVP}</td>
 			)}
 			{edit ? (
 				<td className="table-cell">
@@ -97,12 +97,12 @@ export const EditableItems = ({ item }) => {
 						placeholder="Categoría"
 						aria-describedby="basic-addon1"
 						type="text"
-						name="type"
-						value={editItem.type}
+						name="CATEGORIA"
+						value={editItem.CATEGORIA}
 					/>
 				</td>
 			) : (
-				<td className="table-cell">{item.type}</td>
+				<td className="table-cell">{item.CATEGORIA}</td>
 			)}
 			{edit ? (
 				<td className="table-cell-buttons">

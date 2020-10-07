@@ -8,5 +8,27 @@
     </head>
     <body class="h-100">
         <div id="app" class="h-100"></div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDzBuWzJxCOkXKTqcnDzzwdVoSE4xFDQEk",
+            authDomain: "mercadito-web.firebaseapp.com",
+            databaseURL: "https://mercadito-web.firebaseio.com",
+            projectId: "mercadito-web",
+            storageBucket: "mercadito-web.appspot.com",
+            messagingSenderId: "270843247766",
+            appId: "1:270843247766:web:912fd5990e9f0ac9bcd6b7",
+            measurementId: "G-8L0SNEXHPP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        </script>
     </body>
 </html>

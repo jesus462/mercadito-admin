@@ -10,21 +10,22 @@ export const AddingItem = () => {
 	const { store, actions } = useContext(Context);
 
 	const [newItem, setNewItem] = useState({
-		code: "",
-		name: "",
-		price: "",
-		type: ""
+		COD: "",
+		DESCRIPCION: "",
+		PVP: "",
+		CATEGORIA: ""
 	});
 
 	const onCreate = () => {
 		const db = firebase.firestore();
 		db.collection("items").add(newItem);
 		setNewItem({
-			code: "",
-			name: "",
-			price: "",
-			type: ""
+			COD: "",
+			DESCRIPCION: "",
+			PVP: "",
+			CATEGORIA: ""
 		});
+		actions.setLoadingItems(store.loadingItems);
 		actions.fetchItems();
 	};
 
@@ -39,8 +40,8 @@ export const AddingItem = () => {
 					placeholder="Código"
 					aria-describedby="basic-addon1"
 					type="number"
-					name="code"
-					value={newItem.code}
+					name="COD"
+					value={newItem.COD}
 				/>
 				<FormControl
 					onChange={e => setNewItem({ ...newItem, [e.target.name]: e.target.value })}
@@ -48,8 +49,8 @@ export const AddingItem = () => {
 					placeholder="Descripción"
 					aria-describedby="basic-addon1"
 					type="text"
-					name="name"
-					value={newItem.name}
+					name="DESCRIPCION"
+					value={newItem.DESCRIPCION}
 				/>
 				<FormControl
 					onChange={e => setNewItem({ ...newItem, [e.target.name]: e.target.value })}
@@ -57,8 +58,8 @@ export const AddingItem = () => {
 					placeholder="Precio"
 					aria-describedby="basic-addon1"
 					type="number"
-					name="price"
-					value={newItem.price}
+					name="PVP"
+					value={newItem.PVP}
 				/>
 				<FormControl
 					onChange={e => setNewItem({ ...newItem, [e.target.name]: e.target.value })}
@@ -66,8 +67,8 @@ export const AddingItem = () => {
 					placeholder="Categoría"
 					aria-describedby="basic-addon1"
 					type="text"
-					name="type"
-					value={newItem.type}
+					name="CATEGORIA"
+					value={newItem.CATEGORIA}
 				/>
 			</InputGroup>
 			<div className="container-button">
